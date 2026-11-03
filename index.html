@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Persebaran Klub Super League</title>
+<meta name="description" content="Persebaran 18 klub BRI Super League dalam 3D: lokasi stadion, tren nilai pasar skuad, klasemen, profil, dan skuad lengkap tiap klub.">
+<link rel="icon" href="aset/bri-super-league.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="gaya.css">
+<script type="importmap">{ "imports": { "three": "./vendor/three/three.module.min.js" } }</script>
+</head>
+<body>
+<div id="panggung" class="memuat">
+  <canvas id="kanvas" aria-hidden="true"></canvas>
+  <div id="label" aria-hidden="true"></div>
+
+  <header class="judul">
+    <div class="judul-baris">
+      <div class="judul-teks">
+        <span class="pill" id="pill">Super League</span>
+        <h1>Persebaran Klub<br>Super League</h1>
+      </div>
+      <img class="logo-liga" src="aset/bri-super-league.png" alt="BRI Super League">
+    </div>
+    <p class="sub">Tinggi provinsi mengikuti ukuran yang dipilih. Arahkan kursor ke pulau atau logo klub, klik untuk melihat lebih dekat.</p>
+    <div class="lensa" id="lensa" role="tablist" aria-label="Ukuran tinggi provinsi"></div>
+    <div class="linimasa" id="linimasa" hidden>
+      <button type="button" class="putar" id="putar" aria-label="Putar perubahan nilai pasar">
+        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 1.5v9l8-4.5z" fill="currentColor"/></svg>
+      </button>
+      <div class="titik" id="titik-snap" role="tablist" aria-label="Tanggal nilai pasar"></div>
+    </div>
+    <p class="jelas" id="jelas"></p>
+    <button class="kembali" id="tbl-kembali" type="button" hidden>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Seluruh Indonesia
+    </button>
+    <details class="sumber-m" id="sumber-m"></details>
+  </header>
+
+  <aside class="kartu peringkat" aria-label="Peringkat">
+    <div class="kepala"><h2 id="peringkat-judul">Top 5</h2><span class="kecil" id="peringkat-kolom"></span></div>
+    <ol id="peringkat"></ol>
+  </aside>
+
+  <aside class="kartu detail" id="detail" aria-live="polite"></aside>
+
+  <div class="legenda kartu" id="legenda">
+    <span><i class="sw acl"></i>Peringkat 1–2</span>
+    <span><i class="sw mid"></i>3–15</span>
+    <span><i class="sw rel"></i>Degradasi 16–18</span>
+  </div>
+
+  <footer class="sumber" id="sumber"></footer>
+  <div id="balon" class="balon" hidden></div>
+  <p id="pesan" class="pesan">Memuat data…</p>
+</div>
+
+<div class="skuad-latar" id="skuad" hidden>
+  <section class="skuad-panel" role="dialog" aria-modal="true" aria-labelledby="skuad-nama">
+    <header class="skuad-kepala" id="skuad-kepala">
+      <div class="skuad-identitas">
+        <span id="skuad-logo"></span>
+        <div><p class="skuad-eyebrow">Skuad 2026/27</p><h2 id="skuad-nama"></h2><p class="skuad-ringkas" id="skuad-ringkas"></p></div>
+      </div>
+      <button type="button" class="tutup" id="skuad-tutup" aria-label="Tutup skuad">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </header>
+    <div class="skuad-alat">
+      <div class="tab-posisi" id="tab-posisi" role="tablist" aria-label="Posisi"></div>
+      <input type="search" id="cari-pemain" placeholder="Cari pemain atau negara…" aria-label="Cari pemain">
+    </div>
+    <div class="skuad-tabel-wadah">
+      <table class="skuad-tabel">
+        <thead><tr><th>Pemain</th><th class="kol-klub">Klub</th><th>Posisi</th><th>Kewarganegaraan</th></tr></thead>
+        <tbody id="skuad-isi"></tbody>
+      </table>
+      <p class="skuad-kosong" id="skuad-kosong" hidden>Tidak ada pemain yang cocok.</p>
+    </div>
+    <p class="skuad-sumber" id="skuad-sumber"></p>
+  </section>
+</div>
+<script type="module" src="main.js"></script>
+</body>
+</html>

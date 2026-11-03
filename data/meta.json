@@ -1,0 +1,19 @@
+{
+  "judul": "Persebaran Klub Super League",
+  "musim": "2026/27",
+  "kompetisi": "BRI Super League",
+  "satuan_nilai": "Rp miliar",
+  "catatan": "Java United dan Isenmulang Kalteng dikurangi 2 poin karena pindah kandang. Lokasi titik = perkiraan koordinat stadion.",
+  "catatan_nilai": "Pada 31 Agt sebagian skuad di Transfermarkt belum lengkap, jadi sebagian kenaikan setelahnya berasal dari pemain baru yang terdaftar, bukan kenaikan nilai pemain.",
+  "sumber_skuad": "Goal.com Indonesia, halaman skuad 18 klub & profil pemain (diakses 3 Nov 2026). Lokal = negara tercatat Indonesia (termasuk naturalisasi).",
+  "sumber": [
+    {"untuk": "Klasemen", "nama": "ANTARA (pekan 8, 1 Nov 2026)", "url": "https://megapolitan.antaranews.com/berita/559091/klasemen-bri-super-league-pekan-ke-8-setelah-persib-dan-garudayaksa-menang"},
+    {"untuk": "Nilai pasar 15 Okt–3 Nov", "nama": "Transfermarkt.co.id", "url": "https://www.transfermarkt.co.id/super-league/marktwerteverein/wettbewerb/IN1L"},
+    {"untuk": "Nilai pasar 31 Agt", "nama": "Transfermarkt via Murianews", "url": "https://sport.murianews.com/faqih-mansur-hidayat/474763/di-daftar-nilai-pasar-klub-super-league-persijap-paling-buncit"},
+    {"untuk": "Nilai pasar 2 Okt (10 besar)", "nama": "Transfermarkt via Databoks", "url": "https://databoks.katadata.co.id/en/sport/statistics/6abf24337804a/10-most-valuable-teams-in-the-20262027-bri-super-league-persija-tops-the-list"},
+    {"untuk": "Skuad", "nama": "Goal.com Indonesia", "url": "https://www.goal.com/id"},
+    {"untuk": "Stadion, pelatih, kapten, apparel", "nama": "Wikipedia 2026–27 Super League (Indonesia)", "url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Super_League_(Indonesia)"},
+    {"untuk": "Batas provinsi", "nama": "denyherianto/indonesia-geojson-topojson-maps-with-38-provinces (CC BY 4.0)", "url": "https://github.com/denyherianto/indonesia-geojson-topojson-maps-with-38-provinces"},
+    {"untuk": "Bendera", "nama": "flag-icons (MIT)", "url": "https://github.com/lipis/flag-icons"}
+  ]
+}
